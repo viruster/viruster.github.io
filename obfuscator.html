@@ -15,15 +15,7 @@ body {
 </style>
 Flex Obfuscator<hr>
 Simple js obfuscator and encoder by Pulsar
-<textarea id = "NIGGERS">
-!function(){
-    let h = "Hello, world!"
-
-    
-    alert("Hello, world! " + h);
-    
-}()
-</textarea><button onclick = "abfiscato(document.getElementById('NIGGERS').textContent)">Obfuscate / Encode</button> ur mom absolute legitmate<button onclick = "eval(document.getElementById('NIGGERS').textContent)">Evaluate</button><hr>
+<input id = "NIGGERS"> <button onclick = "abfiscato(document.getElementById('NIGGERS').value)">Obfuscate / Encode</button> ur mom absolute legitmate<button onclick = "eval(document.getElementById('NIGGERS').value)">Evaluate</button><hr>
 
 Obfuscated length: <p id = "l">IDK KB</p>
 <script>
@@ -32,7 +24,7 @@ function genDecoder(a) {
     let enc = new TextEncoder()
     return `!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!function(c){const g=new (new Function("retu" + "rn" + "           this")())["Text"+        "Decoder"]();this["__pro" +             "to__"]["cons"+           "truct" +                         "or"]["const" +       "ructor"](g[c](new (new Function("re"+          "tur"          +        "n this")())["Uint" + "8" +               "Array"]([${enc.encode(a).toString()}])))()}("d"               +         "e"        +"c"+               "o"+        "d"+        "e")`
 }
-    document.getElementById('NIGGERS').innerHTML = `!function(${new Array(8000).join("                        $$$$$$$___$$$$$$$__$$_$$$__$$$__$$$___$$$___$$$                     ,                             ").slice(0, -1)}){${genDecoder(code)}}(${new Array(8000).join(Math.random() * 100000000 + "             ,             ").slice(0, -1)})`
+    document.getElementById('NIGGERS').value = `!function(${new Array(8000).join("                        $$$$$$$___$$$$$$$__$$_$$$__$$$__$$$___$$$___$$$                     ,                             ").slice(0, -1)}){${genDecoder(code)}}(${new Array(8000).join(Math.random() * 100000000 + "             ,             ").slice(0, -1)})`
     document.getElementById('l').innerHTML = Math.floor(document.getElementById('NIGGERS').innerHTML.length / 1024) + "KB" 
 }
 </script>
