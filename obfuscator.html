@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<style>
+body {
+   color: #179;
+   background: #000;
+   font-family: monospace;
+}
+</style>
+Flex Obfuscator<hr>
+Simple js obfuscator and encoder by Pulsar
+<textarea id = "NIGGERS">
+!function(){
+    alert("Hello, world!");
+}()
+</textarea><button onclick = "abfiscato(document.getElementById('NIGGERS').textContent)">Obfuscate / Encode</button> ur mom absolute legitmate<button onclick = "eval(document.getElementById('NIGGERS').textContent)">eval</button>
+<script>
+window.abfiscato = code => {
+function genDecoder(a) {
+    let enc = new TextEncoder()
+    return `!function(c){const g=new (new Function("return this")())["Text"+        "Decoder"]();this["__pro" +             "to__"]["construct" +                         "or"]["const" +       "ructor"](g[c](new (new Function("retur" +        "n this")())["Uint" + "8" +               "Array"]([${enc.encode(a).toString()}])))()}("decode")`
+}
+    document.getElementById('NIGGERS').innerHTML = `!function(${new Array(4500).join("$$$$$$$___$$$$$$$__$$_$$$__$$$__$$$___$$$___$$$,").slice(0, -1)}){${genDecoder(code)}}(${new Array(4500).join(Math.random() * 100000000 + ",").slice(0, -1)})`
+
+}
+</script>
+</body>
+</html>
