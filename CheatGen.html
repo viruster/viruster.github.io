@@ -1,0 +1,240 @@
+<script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+
+
+<script>
+  
+ let start = `
+ let franky = false;
+let bta = SHAME
+const MooMoo = (function MooMooJS_beta() {})[69];
+let shame = 0;
+let turretReload = true;
+ MooMoo.on("packet", (obj) => {
+        let packet = obj.packet;
+        let packetData = obj.data;
+        if (packet == "7" && packetData[0] == MooMoo.myPlayer.id && RANGETICK) {
+          if (checkfwaing(10000) && turretReload) {
+            storeBuy(53);
+            storeEquip(53);
+            turretReload = false
+setTimeout(()=>{
+turretReload = true;
+}, 10000);
+          }
+        }
+        
+        if (packet == "12") {
+          MooMoo.myPlayer.place(MooMoo.myPlayer.inventory.spike);
+          setTimeout(()=>{
+            MooMoo.sendPacket("c", 1);
+            MooMoo.sendPacket("c", 0);
+          }, AUTORPL);
+        }
+        if (packet == "h" && packetData[0] == MooMoo.myPlayer.sid) {
+        if (packetData[1] < 65) {
+        franky = true;
+        setTimeout(()=>{
+          MooMoo.myPlayer.place(MooMoo.myPlayer.inventory.spike)
+          franky = false;
+        }, AB);
+          setTimeout(() => {
+            let i=2;while(i--){MooMoo.myPlayer.place(MooMoo.myPlayer.inventory.food)}
+            shame++;
+          }, ANTIHEAL);
+          return;
+        }
+        if (checkfwaing(4000)) {storeBuy(6);
+        storeEquip(6);}
+        setTimeout(()=>{let i=2;while(i--){MooMoo.myPlayer.place(MooMoo.myPlayer.inventory.food)}; if (HEALSPEED < 120){shame++}}, HEALSPEED);
+        }
+        
+        
+ });
+ WebSocket.prototype.send = new Proxy(WebSocket.prototype.send, {
+   apply(target, that, args) {
+   let x = MooMoo.msgpack.decode(args[0]);
+if (x[0] == "pp" || x[0] == "7" || x[0] == "rmd" || x[0] == "14" || x[0] == null) return ()=>{};
+     if (franky) {
+     
+    if (Math.round( x[x.length - 1]) != x[x.length - 1]) x[x.length - 1] += 0.000006372958729188273827463719384772827472828467365849392715369402027682648161;
+     args[0] = MooMoo.msgpack.encode(x)
+     }
+     return Reflect.apply(...arguments);
+   }
+ });
+function checkfwaing(num) {
+        return Number(document.getElementById('scoreDisplay').textContent) > num
+    }
+setInterval(()=>{
+  if (shame > bbta) {
+    setTimeout(()=>{
+    if (checkfwaing(6000)) {storeBuy(7);
+      storeEquip(7); shame-=2}
+    }, 300);
+    }
+}, 120);
+function insta() {
+if (checkfwaing(6000)) {
+  storeBuy(7);
+  storeEquip(7);
+}
+  MooMoo.sendPacket("c", 1);
+  setTimeout(()=>{
+    MooMoo.sendPacket("5", MooMoo.myPlayer.inventory.secondary, true);
+    if (checkfwaing(10000)) {
+    storeBuy(53);
+    storeEquip(53);
+    }
+    MooMoo.sendPacket("c", 0);
+  }, INSTA);
+}
+let moveDir = 0;
+class Placer {
+        constructor(key, act) {
+            this.key = key;
+            this.todo = act;
+            window.addEventListener("keydown", e => {
+                if (this.key == e.keyCode) this.todo();
+            })
+        }
+    }
+Object.defineProperty(Object.prototype, "turnSpeed", {
+        value: 0,
+        writable: false
+    })
+    var mills = false
+    new Placer(66, ()=>{
+        mills = !mills
+    });
+    new Placer(86, ()=>{MooMoo.myPlayer.place(MooMoo.myPlayer.inventory.spike)});
+    new Placer(70, ()=>{MooMoo.myPlayer.place(MooMoo.myPlayer.inventory.trap)});
+    new Placer(87, ()=>moveDir=-1.5);
+    new Placer(65, ()=>moveDir=0 - Math.PI);
+    new Placer(68, ()=>moveDir=0);
+    new Placer(83, ()=>moveDir=moveDir=1.5);
+    setInterval(()=>{
+      
+      if (mills) {
+            let rt = moveDir - Math.PI;
+            MooMoo.sendPacket("2", rt + (Math.PI / 2))
+            MooMoo.myPlayer.place(MooMoo.myPlayer.inventory.mill);
+                MooMoo.sendPacket("2", rt)
+                MooMoo.myPlayer.place(MooMoo.myPlayer.inventory.mill);
+                    MooMoo.sendPacket("2", rt - (Math.PI / 2))
+                    MooMoo.myPlayer.place(MooMoo.myPlayer.inventory.mill);
+    }
+    }, 500);
+    function createHook(target, prop, setter, getter) {
+        const symbol = Symbol(prop);
+        Object.defineProperty(target, prop, {
+            get() {
+                getter(this, this[symbol]);
+                return this[symbol];
+            },
+            set(value) {
+                setter(this, symbol, value);
+            },
+            configurable: true
+        })
+    }
+      let item = null;
+    
+    createHook(Object.prototype, "isItem", function(that, symbol, value) {
+        that[symbol] = value;
+    }, function(that, value) {
+        if (value === true) {
+            item = that;
+            if (item.name == "pit trap" && Math.hypot(item.x - MooMoo.myPlayer.x, item.y - MooMoo.myPlayer.y) < 90) {
+                    checkfwaing(15000) && storeEquip(40)
+                     MooMoo.sendPacket("c", 1, null)
+                }
+        }
+    });
+    
+    
+      document.getElementById("gameName").innerHTML = 'GAMENme'
+    document.getElementById("mainMenu").style.backgroundImage = "url('BGM')";
+
+document.getElementById('loadingText').innerHTML = 'Framework 23<br><div id="myProgress" style = "width: 100%;background-color: grey;"><div id="myBar" style = "width: 1%;height: 30px;background-color: MAC;"></div></div>';
+var playButton = 'transition: 1s all;text-align: center;font-size: 23px;padding: 6px;color: #fff;background-color: #2c9506;box-shadow: 0px 0px 8px gray, 0px 0px 4px gray;width: 100%;border-radius: 15px;';
+var menuCard = 'background: #e6e3df;text-align: center;box-shadow: inset 0px 0px 10px black;'
+document.querySelector('.menuCard').style = menuCard;
+document.getElementById("enterGame").style=playButton;
+
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+move();
+setInterval(() => {
+    allColors = ["#000000","rgb(256,0,0)","rgb(0,256,0)","rgb(0,0,256)"]
+   ultraSkin = String(allColors[allColors.length * Math.random()|0]);
+    window.config.skinColors = ["rgb(256,0,0)", "rgb(0,256,0)", "rgb(0,0,256)", "rgb(256,256,0)", "rgb(0,256,256)", "rgb(256,0,256)", "rgb(256,256,256)", "rgb(70,37,78)", "rgb(89,34,10)", ultraSkin]
+}, 10)
+CanvasRenderingContext2D.prototype.fillRect = new Proxy(CanvasRenderingContext2D.prototype.fillRect, {
+  apply(target, that, args) {
+    that.beginPath();
+    that.strokeStyle = "TRACER_COL";
+    that.moveTo(1920 / 2, 1080 / 2);
+    that.lineTo(args[1], args[2] + 120);
+    that.stroke();
+    that.strokeStyle = "black";
+    that.closePath();
+    return Reflect.apply(...arguments);
+  }
+})
+`;
+function g(id) {
+  return document.getElementById(id).value;
+}
+window.read = () => {
+  let obfs = start.replaceAll("HEALSPEED", g("a")).replaceAll("ANTIHEAL", g("b")).replaceAll("SHAME", g("e")).replaceAll("INSTA", g("c")).replaceAll("GAMENme", g("f")).replaceAll("AUTORPL", g("g")).replaceAll("AB", g("h")).replaceAll("TRACER_COL", g("j")).replaceAll("BGM", g("k")).replaceAll("MAC", g("l")).replaceAll("RANGETICK", g("z"))
+  document.write("<textarea>" + `// ==UserScript==
+// @name         ${g("d")}
+// @match        *://*.moomoo.io/*
+// @require      https://cdn.jsdelivr.net/gh/NuroC/MooMoo.js/dist/bundle.js
+// @run-at       document-end
+// ==/UserScript==
+` + obfs + "</textarea><style>textarea { color: white; width: 100%; height: 100% ; transition: color 2s linear; border: none;</style> <script>document.querySelector('textarea').style.color = 'blue'<\/script>");
+}
+</script>
+
+<h1>Mod Creator</h1>
+<hr>
+Setup:<br>
+Heal Speed: <input id = "a"> <br>
+AntiInsta heal speed: <input id = "b"><br>
+Insta Speed: <input id = "c"><br>
+Bulltick after: <input id = "e"><br>
+Game name: <input id = "f"><br>
+Mod name: <input id = "d"><br>
+Autoreplace onetick speed: <input id = "g"><br>
+AB Speed:  <input id = "h"><br>
+Tracer Color: <input id = "j"><br>
+Main Menu Background: <input id = "k"><br>
+ProgressBar Color: <input id = "l"><br>
+RangeTick Expression: <input id = "z"><br>
+<button onclick = "read()">Generate </button>
+<style>
+* {
+    background: rgb(11, 21, 19);
+    color: grey;
+}
+input {
+  border: 1px solid white;
+}
+</style>
